@@ -22,7 +22,7 @@ function disc_login() {
     if (message.channel.id == 1143067131911622676) {
       var Content = message.content
       const AegisDevelopment = client.guilds.cache.get('403010986858119178').channels.cache.get('417393171333644298') || client.channels.cache.get('417393171333644298');
-      return AegisDevelopment.send({content: Content})
+      return AegisDevelopment.send({ files: Array.from(message.attachments.values()), content: Content})
         .then(msg => {
           const Emoji = client.emojis.cache.find(emoji => emoji.name === "aegis");
           msg.react(Emoji)
@@ -30,7 +30,7 @@ function disc_login() {
     } else if (message.channel.id == 1143067106791927808) {
       var Content = message.content
       const ReapersDevelopment = client.guilds.cache.get('1132521425023017080').channels.cache.get('1132521426147086356') || client.channels.cache.get('1132521426147086356');
-      return ReapersDevelopment.send({content: Content})
+      return ReapersDevelopment.send({ files: Array.from(message.attachments.values()), content: Content})
         .then(msg => {
           const Emoji = client.emojis.cache.find(emoji => emoji.name === "reapers");
           msg.react(Emoji)
@@ -39,12 +39,12 @@ function disc_login() {
       var Content = message.content
       const AegisDevelopment = client.guilds.cache.get('403010986858119178').channels.cache.get('417393171333644298') || client.channels.cache.get('417393171333644298');
       const ReapersDevelopment = client.guilds.cache.get('1132521425023017080').channels.cache.get('1132521426147086356') || client.channels.cache.get('1132521426147086356');
-      AegisDevelopment.send({content: Content})
+      AegisDevelopment.send({ files: Array.from(message.attachments.values()), content: Content})
         .then(msg => {
           const Emoji = client.emojis.cache.find(emoji => emoji.name === "aegis");
           msg.react(Emoji)
         })
-       return ReapersDevelopment.send({content: Content})
+       return ReapersDevelopment.send({ files: Array.from(message.attachments.values()), content: Content})
         .then(msg => {
           const Emoji = client.emojis.cache.find(emoji => emoji.name === "reapers");
           msg.react(Emoji)
