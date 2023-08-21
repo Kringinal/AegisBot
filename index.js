@@ -20,7 +20,6 @@ function disc_login() {
 
   client.on("messageCreate", (message) => {
     if (message.channel.id == 1143067131911622676) {
-      console.log("IS A SPECIAL MESSAGE!!")
       var Content = message.content
       const AegisDevelopment = client.guilds.cache.get('403010986858119178').channels.cache.get('417393171333644298') || client.channels.cache.get('417393171333644298');
       return AegisDevelopment.send({content: Content})
@@ -58,7 +57,7 @@ disc_login();
 cron.schedule('*/2 * * * *', async () => {
   await axios
   .get(
-    `https://orioncore-7d170ec55711.herokuapp.com/`
+    `https://aegis-core-3a66fcf46556.herokuapp.com/`
   )
 })
 
