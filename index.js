@@ -6,6 +6,9 @@ const { Client, EmbedBuilder, GatewayIntentBits  } = require('discord.js');
 const express = require('express');
 const app = express();
 
+//**doing this will hopefully trigger the bot to come online??**\\
+
+
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent,  GatewayIntentBits.GuildMessages,] }); 
 const IntroductionChannelFiles = fs.readdirSync('./Introduction').filter(file => file.endsWith('.js'));
 
